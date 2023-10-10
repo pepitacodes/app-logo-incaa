@@ -27,17 +27,14 @@ h1 {
 }
 .select-area {
   display: grid;
-  grid-template-columns: 0.8fr 1.1fr 1fr;
-  margin: 5%;
+  grid-template-columns: 0.8fr 1fr 1.1fr;
   margin-top: 2rem;
-  padding: 3%;
+  margin-bottom: 2rem;
+  padding: 2%;
   background-color: var(--color-negro);
 } 
 h2{
   color: var(--color-blanco);
-}
-label, a, input {
-  font-size: 1rem;
 }
 /* ddSlick */
 /* >>>>SELECT CATEGORIA Y LEYENDA/RESERVA<<<< */
@@ -49,6 +46,7 @@ label, a, input {
 }
 .dd-selected{
   height: 100px;
+  font-size: 1.3rem;
 }
 .dd-option, .dd-selected{
   background-color: var(--color-negro);
@@ -62,30 +60,32 @@ label, a, input {
   background-color: var(--color-negro) !important;
 }
 .dd-selected-image, .dd-option-image {
-  max-width:100%!important;
+  max-width:70%!important;
 }
 /* >>>>ESTILO DE CHECKBOX DESCRIPTORES<<<< */
  .descriptores-container, .descriptores > label > img {
    width: 100%;
+   object-fit: contain;
  }
  .descriptores {
    background-color: var(--color-negro);
    display: grid;
-   grid-template-columns: 50px 0.5fr 10px; 
+   grid-template-columns: 50px 0.7fr 10px; 
    padding-top: 0px;
    grid-gap: 10px; 
  }
  /* >>>>DIV DE IMAGEN RENDERIZADA<<<< */
 .logo-container {
   background-color: var(--color-negro);
-  max-width: 100%;
-  margin: 5%;
+  max-width: 1920px;
+  max-height: 1080px;
 }
 .images-container {
+  position: relative;
   padding-top: 150px;
+  padding-bottom: 80px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 40px; 
   margin: auto 20%;
   align-items: center;
 }
@@ -95,25 +95,44 @@ label, a, input {
 }
 .first-container img {
   height: auto;
-  width: 100%; 
+  width: 90%; 
 }
 /* >>>>DESCRIPTORES RENDERIZADOS<<<< */
 .imagenContainer img {
-  margin: auto 5px;
+  object-fit: contain;
+  aspect-ratio: 16/9;
+  /*margin: auto 5px;*/
 }
 /*
 .logo-categoria {
   max-width: 500px;
   min-width: 450px;
 }*/
-hr {
-  color: white;
-  width: 93%;
-  margin: auto;
+.logo-leyenda > img {
+  width: 99%;
 }
+hr {
+    height: 2px;
+    background-color: white;
+    width: 84%;
+    margin: 0;
+    margin-left: 16px;
+    margin-bottom: 4px;
+}
+/*
+.barra-vertical {
+  bottom: 215px;
+  left: 100px;
+  position: absolute;
+  z-index: 1;
+  transform: translate(10px, 10px);
+  transform: rotate(90deg);
+  width: 33%;
+  left: 322px;
+  display: none;
+}*/
 .footer {
   text-align: center;
-  margin-top: 80px;
 }
 .footer > img {
   width: 100%;
@@ -149,14 +168,4 @@ button:hover {
 @media  screen and (min-width: 1000) and (max-width: 1500px) {
   /*estilos notebook*/
 }
-/*
-.barra-vertical {
-  transform: rotate(-90deg);
-  width: 300px;
-  background-color: white;
-  height: 2px;
-  position: absolute;
-  left: 328px;
-  bottom: 146px;
-  position: relative; 
-} */
+
