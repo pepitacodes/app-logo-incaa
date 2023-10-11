@@ -111,7 +111,6 @@ function cargarSelectLeyendas(){
         }
     })
 }
-/*
 function hayDescriptores() {
     let descriptores = document.getElementById("imagenContainer").children ?? null;
     if (descriptores) {
@@ -121,15 +120,37 @@ function hayDescriptores() {
     }
 }
 function cargarBarraVertical() {
-    let barra = document.getElementById("barra-vertical");
-    if(hayDescriptores()) {
-        barra.style.display = "block";
+    const barra = document.getElementById('barra-vertical');
+    const descriptores = document.querySelectorAll('input[type="checkbox"]:checked');
+  
+    // Si hay al menos un descriptor seleccionado, muestra la barra
+    if (descriptores.length > 0) {
+      barra.style.display = 'block';
+    } else {
+      barra.style.display = 'none';
     }
-    else {
-        barra.style.display = "none";
-    }
-}
-*/
+    //si no hay descriptores seleccionados, la barra vertical no se muestra
+    if (descriptores.length === 0) {
+        barra.style.display = 'none';
+      }
+    //>>>>falta implementar los dos tipos de barra vertical*/
+    /*  
+    if (descriptores.length <= 2) {
+    barra.style.width = '283';
+    } else {
+    barra.style.width = '411';
+  }*/
+}  
+      
+    // Si hay 0 descriptores, oculta la barra
+   
+  
+  
+  // Add an event listener to all checkbox elements
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach(function (checkbox) {
+    checkbox.addEventListener('change', cargarBarraVertical);
+  });
 function cargarCheckboxDescriptores() {
     var checkboxes = document.querySelectorAll('input[type="checkbox"]');
     var imagenContainer = document.getElementById("imagenContainer");
