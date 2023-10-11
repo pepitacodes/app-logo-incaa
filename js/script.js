@@ -142,7 +142,7 @@ function cargarCheckboxDescriptores() {
           var imagen = document.createElement("img");
           imagen.src = `./assets/descriptores-tematicos/descriporestrans/${descriptor}.png`;
           imagen.style.objectFit = "contain";
-          imagen.style.width = "70%"; 
+          imagen.style.width = "445"; 
           imagenesSeleccionadas.push({ checkbox, imagen }); // Agregar checkbox e imagen al array
         } else {
           // Filtrar el array para eliminar el elemento correspondiente
@@ -153,6 +153,10 @@ function cargarCheckboxDescriptores() {
         // Actualizar el contenido del contenedor de imágenes
         imagenContainer.innerHTML = "";
         imagenesSeleccionadas.forEach(function (item) {
+            /*if (imagenesSeleccionadas.length > 5) {
+                item.imagen.style.width = "300";
+                item.imagen.style.height = "auto";
+              }*/
           imagenContainer.appendChild(item.imagen);
         });
       });

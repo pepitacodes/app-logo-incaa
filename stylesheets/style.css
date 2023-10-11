@@ -14,7 +14,7 @@ body {
 /* >>>>CONTENEDOR PRINCIPAL<<<< */
 .main-container {
   width: 100%;
-  height: 100vh;
+  height: fit-content;
 }
 h1 {
     display: block;
@@ -77,46 +77,48 @@ h2{
  /* >>>>DIV DE IMAGEN RENDERIZADA<<<< */
 .logo-container {
   background-color: var(--color-negro);
-  max-width: 1920px;
-  max-height: 1080px;
+  width: 100%;
+  height: calc(100% - 150px);
 }
 .images-container {
+  height: 500px;
   position: relative;
   padding-top: 150px;
-  padding-bottom: 80px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 40px;
   margin: auto 20%;
   align-items: center;
 }
 .first-container {
   display: flex;
   flex-direction: column;
-}
-.first-container img {
-  height: auto;
-  width: 90%; 
+  width: 545px;
+  height: 327px;
 }
 /* >>>>DESCRIPTORES RENDERIZADOS<<<< */
-.imagenContainer img {
-  object-fit: contain;
-  aspect-ratio: 16/9;
-  /*margin: auto 5px;*/
+.imagenContainer {
+  max-height: 410px;
 }
-/*
+.imagenContainer img {
+  height: 82px;
+  flex: 1;
+}
 .logo-categoria {
-  max-width: 500px;
-  min-width: 450px;
-}*/
-.logo-leyenda > img {
-  width: 99%;
+  width: 545px;
+  height: 245px;
+}
+.logo-leyenda  {
+  width: 545px;
+}
+.logo-leyenda img {
+  width: 100%;
 }
 hr {
-    height: 2px;
+    height: 3px;
     background-color: white;
-    width: 84%;
-    margin: 0;
-    margin-left: 16px;
+    width: 510px;
     margin-bottom: 4px;
 }
 /*
@@ -133,9 +135,11 @@ hr {
 }*/
 .footer {
   text-align: center;
+  padding-top: 50px;
 }
 .footer > img {
-  width: 100%;
+  height: calc(100% - 100px);
+  width: calc(100%);
 }
 /* Estilo del boton */
 .button-div {
